@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<div class="page">
+
+    <header class="top-header">
+
+        <div class="header-left">
+            <div class="logo">EMS</div>
+
+            <div>
+                <p class="tag">EMPLOYEE MANAGEMENT</p>
+                <h1>Employee Dashboard</h1>
+                <p class="header-text">
+                    Manage your employees, departments and salaries
+                </p>
+            </div>
+        </div>
+
+        <div id="dateTime"></div>
+
+    </header>
+
+
+    <section class="search-area">
+
+        <div class="search-input">
+            <span>⌕</span>
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search employee by name..."
+            >
+        </div>
+
+        <button id="searchButton">Search</button>
+
+    </section>
+
+
+    <section class="filter-area">
+
+        <button id="allButton" class="filter-active">All Employees</button>
+        <button id="itButton">IT</button>
+        <button id="hrButton">HR</button>
+        <button id="financeButton">Finance</button>
+        <button id="marketingButton">Marketing</button>
+
+    </section>
+
+
+    <div id="message"></div>
+
+
+    <section class="stats">
+
+        <div class="stat-box">
+            <div class="stat-symbol employee-symbol">👥</div>
+            <div>
+                <p>Employees</p>
+                <h2 id="employeeCount">0</h2>
+            </div>
+        </div>
+
+        <div class="stat-box">
+            <div class="stat-symbol salary-symbol">₹</div>
+            <div>
+                <p>Total Salary</p>
+                <h2 id="totalSalary">₹0</h2>
+            </div>
+        </div>
+
+        <div class="stat-box">
+            <div class="stat-symbol average-symbol">↗</div>
+            <div>
+                <p>Average Salary</p>
+                <h2 id="averageSalary">₹0</h2>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section id="highestEmployee" class="highest-box">
+        No salary data
+    </section>
+
+
+    <section class="content-section">
+
+        <div class="section-header">
+            <div>
+                <p>ORGANIZE YOUR TEAM</p>
+                <h2>Sort Employees</h2>
+            </div>
+        </div>
+
+        <div class="sort-box">
+
+            <button id="sortNameAZButton">
+                <span>A → Z</span>
+                Name
+            </button>
+
+            <button id="sortNameZAButton">
+                <span>Z → A</span>
+                Name
+            </button>
+
+            <button id="sortSalaryHighButton">
+                <span>₹ ↓</span>
+                Salary High
+            </button>
+
+            <button id="sortSalaryLowButton">
+                <span>₹ ↑</span>
+                Salary Low
+            </button>
+
+            <button id="sortAgeLowButton">
+                <span>18 →</span>
+                Age Low
+            </button>
+
+            <button id="sortAgeHighButton">
+                <span>↓</span>
+                Age High
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <section class="content-section">
+
+        <div class="section-header employee-heading">
+
+            <div>
+                <p>TEAM DIRECTORY</p>
+                <h2>Employee List</h2>
+            </div>
+
+            <span class="directory-count">
+                <span id="directoryCount">0</span> Members
+            </span>
+
+        </div>
+
+        <div id="employeeContainer" class="employee-grid"></div>
+
+    </section>
+
+
+    <section class="add-section">
+
+        <div class="add-header">
+
+            <div class="add-icon">+</div>
+
+            <div>
+                <p>TEAM MANAGEMENT</p>
+                <h2>Add New Employee</h2>
+            </div>
+
+        </div>
+
+
+        <div class="form-grid">
+
+            <div class="input-group">
+                <label>Employee Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter full name"
+                >
+            </div>
+
+            <div class="input-group">
+                <label>Age</label>
+                <input
+                    type="number"
+                    id="age"
+                    placeholder="Enter age"
+                >
+            </div>
+
+            <div class="input-group">
+                <label>Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter email address"
+                >
+            </div>
+
+            <div class="input-group">
+                <label>Department</label>
+
+                <select id="department">
+                    <option value="">Select Department</option>
+                    <option value="IT">IT</option>
+                    <option value="HR">HR</option>
+                    <option value="Finance">Finance</option>
+                    <option value="Marketing">Marketing</option>
+                </select>
+
+            </div>
+
+            <div class="input-group">
+                <label>Salary</label>
+                <input
+                    type="number"
+                    id="salary"
+                    placeholder="Enter salary"
+                >
+            </div>
+
+        </div>
+
+
+        <button id="addEmployeeButton" class="add-button">
+            + Add Employee
+        </button>
+
+        <p id="errorMessage"></p>
+
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
